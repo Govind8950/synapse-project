@@ -377,7 +377,7 @@
 							{
 								"activity": "Lookup1",
 								"dependencyConditions": [
-									"Completed"
+									"Succeeded"
 								]
 							}
 						],
@@ -414,7 +414,8 @@
 										"sink": {
 											"type": "DelimitedTextSink",
 											"storeSettings": {
-												"type": "AzureBlobFSWriteSettings"
+												"type": "AzureBlobFSWriteSettings",
+												"copyBehavior": "FlattenHierarchy"
 											},
 											"formatSettings": {
 												"type": "DelimitedTextWriteSettings",
@@ -885,7 +886,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "files.json",
+						"fileName": "main.json",
 						"folderPath": "metadata",
 						"fileSystem": "retail-data"
 					}
